@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            overflow-x: hidden;
+        }
+        body{
+            font-family: sans-serif;
+            color: white;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            background-color: steelblue;
+            padding: 30px;
+            margin: 0 auto;
+        }
+        .live-ballance{
+            display: grid;
+            width: 100%;
+            margin: 0 auto;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+        }
+        .item{
+            padding: 20px;
+            border-radius: 5px;
+        }
+    
+        h3,h2{
+            font-size: 30px;
+            margin: 5px 0;
+        }
+        h1{
+            text-align: center;
+            color: orangered;
+        }
+
+
+        .input-balance{
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            margin-top: 40px;
+        }
+        .change{
+            padding: 20px;
+            border-radius: 5px;
+        }
+        input{
+            border: none;
+            padding: 6px;
+            width: 350px;
+            margin-bottom: 8px;
+            font-size: 16px;
+            outline: none;
+            border-radius: 3px;
+        }
+        button{
+            padding: 6px 20px;
+            font-weight: 500;
+            font-size: 19px;
+            border: none;
+            background-color: orange;
+            color: white;
+            border-radius: 4px;
+        }
+
+        @media only screen and (max-width:1100px){
+            .input-balance{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 40px;
+            }
+            
+        }
+        @media only screen and (max-width:750px){
+            main{
+                width: 100%;
+            }
+            .live-ballance{
+                display: grid;
+                width: 100%;
+                margin: 0 auto;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+            }
+            
+            
+        }
+        @media only screen and (max-width:500px){
+            
+            .live-ballance{
+                display: grid;
+                width: 100%;
+                margin: 0 auto;
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+            }
+            input{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to baper bank!!</h1>
+    <main>
+        <section class="live-ballance">
+            <div style="background-color: crimson;" class="item" id="deposit">
+                <h3>Deposit</h3>
+                <h2>$ <span id="deposit-total">00</span></h2>
+            </div>
+            <div style="background-color:salmon;" class="item" id="withdraw">
+                <h3>Withdraw</h3>
+                <h2>$ <span id="withdraw-total">00</span></h2>
+            </div>
+            <div style="background-color: darksalmon;" class="item" id="ballance">
+                <h3>Balance</h3>
+                <h2>$ <span id="balance-total">1240</span></h2>
+            </div>
+        </section>
+        <section class="input-balance">
+            <div style="background-color: mediumspringgreen;" class="change">
+                <h3>Please Deposit</h3>
+                <div>
+                    <input type="number" name="" id="deposit-field" placeholder="deposit amount">
+                    <br>
+                    <button id="deposit-btn">Deposit</button>
+                </div>
+            </div>
+            <div style="background-color: orchid;" class="change">
+                <h3>Please withdraw</h3>
+                <div>
+                    <input type="number" name="" id="withdraw-field" placeholder="withdraw amount">
+                    <br>
+                    <button id="withdraw-btn">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <script src="js/script.js"></script>
+
+
+
+</body>
+</html>

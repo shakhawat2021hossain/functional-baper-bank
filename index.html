@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+        h1{
+            text-align: center;
+        }
+        .form{
+            width: 400px;
+            margin: 0 auto;
+            background: linear-gradient(#ff847c, #fecea8);
+        }
+        #log-in{
+            padding: 30px;
+            color: white;
+            text-align: center;
+            
+        }
+
+        input{
+            padding: 4px;
+            margin: 5px 0;
+            border: none;
+            border-bottom: 2px solid;
+            font-size: 20px;
+            outline: none;
+        }
+        input:focus{
+            border-bottom: 2px solid crimson;
+        }
+        button{
+            padding: 6px 20px;
+            font-weight: 500;
+            font-size: 22px;
+            margin-top: 7px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            background-color: crimson;
+        }
+        button:hover{
+            background-color: rgb(250, 61, 99);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to <span style="color: crimson;">AMAR BAPER BANK</span></h1>
+    <div class="form">
+        <div id="log-in">
+            <h2>Log In<h2>
+            <input type="email" name="" id="email-field" placeholder="Email">
+            <br>
+            <input type="password" name="" id="pass-field" placeholder="password">
+            <br>
+            <button id="login-btn">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        const loginBtn = document.getElementById('login-btn');
+        loginBtn.addEventListener('click', function(){
+            const email = document.getElementById('email-field').value;
+            const pass = document.getElementById('pass-field').value;
+            if(email == 'user@baperbank.com' && pass == 'iLoveYouAbbu'){
+                window.location.href = 'banking.html';
+
+            }
+            else{
+                console('its not your baper bank')
+            }
+        })
+
+    </script> 
+    
+</body>
+</html>
